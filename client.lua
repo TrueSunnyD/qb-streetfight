@@ -1,3 +1,4 @@
+local QBCore = exports["qb-core"]:GetCoreObject()
 local betAmount = 0
 local fightStatus = STATUS_INITIAL
 local STATUS_INITIAL = 0
@@ -76,7 +77,7 @@ AddEventHandler('qb-streetfight:fightFinished', function(looser)
 
     if participando == true then
         if(looser ~= GetPlayerServerId(PlayerId()) and looser ~= -2) then
-            QBCore.Functions.Notify("You've won!", "primary")
+            QBCore.Functions.Notify("You've won!", "success")
             SetPedMaxHealth(PlayerPedId(), 200)
             SetEntityHealth(PlayerPedId(), 200)
     
