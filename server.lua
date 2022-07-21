@@ -1,3 +1,4 @@
+local QBCore = exports["qb-core"]:GetCoreObject()
 local bluePlayerReady = false
 local redPlayerReady = false
 local fight = {}
@@ -22,7 +23,7 @@ AddEventHandler('qb-streetfight:join', function(betAmount, side)
 
         if Player.PlayerData.money.cash >= betAmount then
             Player.Functions.RemoveMoney('cash', betAmount,"fight-join")
-            TriggerClientEvent('QBCore:Notify', source, 'You have joined successfully', 'primary', 3500)
+            TriggerClientEvent('QBCore:Notify', source, 'You have joined successfully', 'success', 3500)
 
             if side == 0 then
                 TriggerClientEvent('qb-streetfight:playerJoined', -1, 1, source)
