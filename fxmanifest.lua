@@ -1,4 +1,4 @@
-fx_version 'adamant'
+fx_version 'cerulean' --was adamant
 
 game 'gta5'
 
@@ -17,6 +17,6 @@ client_script {
 }
 
 shared_scripts { 
-	'@qb-core/import.lua',
+	--'@qb-core/import.lua',
 	'config.lua'
 }
